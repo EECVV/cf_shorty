@@ -1,12 +1,12 @@
-name = "shorty" # The name of your worker
+name = "cf-shorty" # The name of your worker
 main = "worker.js" # The entry point for your worker code
 compatibility_date = "2023-10-30" # Use a recent compatibility date
 
 # Routes tell Cloudflare which requests should trigger this worker.
 # The worker handles API calls via api.shorty.lkly.net and redirects via lkly.net/+
 routes = [
-  { pattern = "api.shorty.lkly.net/*", zone_name = "lkly.net" }, # Handles API calls
-  { pattern = "lkly.net/+*", zone_name = "lkly.net" }          # Handles redirects
+  { pattern = "api.shorty.kkjh.dpdns.org/*", zone_name = "kkjh.dpdns.org" }, # Handles API calls
+  { pattern = "s.kkjh.dpdns.org/*", zone_name = "kkjh.dpdns.org" }          # Handles redirects
 ]
 
 # KV Namespace binding
@@ -15,7 +15,7 @@ routes = [
 # Then, add the preview_id and id obtained from the command output below.
 [[kv_namespaces]]
 binding = "SHORTY_LINKS" # This is the variable name used in worker.js (env.SHORTY_LINKS)
-id = "33ba4802b325423085be46e2103a1e3e" # Your Production KV namespace ID
+id = "15aa33d9d82a4e7f9d6995d7ebaae468" # Your Production KV namespace ID
 preview_id = "" # Preview ID was not provided, leave empty for now
 
 # Optional: Add site configuration if you plan to serve index.html via the worker directly
