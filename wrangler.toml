@@ -22,4 +22,3 @@ preview_id = "" # Preview ID was not provided, leave empty for now
 # [site]
 # bucket = "./" # Directory containing your static assets (like index.html)
 # entry-point = "." # Can be omitted if you only have worker.js
-
